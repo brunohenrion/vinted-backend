@@ -396,8 +396,7 @@ app.get("/offers", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res;
-  json({ message: "Welcome on my server" });
+  res.json({ message: "Welcome on my server" });
 });
 
 app.all("*", (req, res) => {
