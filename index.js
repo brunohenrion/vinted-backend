@@ -12,6 +12,7 @@ app.use(cors());
 const uid2 = require("uid2"); // Package qui sert à créer des string aléatoires
 const SHA256 = require("crypto-js/sha256"); // Sert à encripter une string
 const encBase64 = require("crypto-js/enc-base64"); // Sert à transformer l'encryptage en string
+const { json } = require("express");
 
 app.use(express.json());
 mongoose.set("strictQuery", true);
@@ -392,6 +393,11 @@ app.get("/offers", async (req, res) => {
   } catch (error) {
     res.json({ message: error.message });
   }
+});
+
+app.get("/", (req, res) => {
+  res;
+  json({ message: "Welcome on my server" });
 });
 
 app.all("*", (req, res) => {
