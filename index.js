@@ -379,7 +379,7 @@ app.get("/offers", async (req, res) => {
     // }
     // PRIX COMPRIS ENTRE 40 ET 200
     // const results = await Offer.find({
-    //   product_price: {
+    //   product_price
     //     $gte: req.query.priceMin,
     //     $lte: req.query.priceMax,
     //   },
